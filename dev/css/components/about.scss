@@ -1,0 +1,33 @@
+.about{
+  padding-bottom: 220px;
+  .wrapper{
+    max-width: 520px;
+  }
+  h2{
+    margin-bottom: 0;
+  }
+  p{
+    text-align: center;
+    margin-bottom: 0;
+  }
+  textarea{
+    resize: none;
+    height: 180px;
+    padding: 20px;
+    margin: 40px 0 70px;
+    &::placeholder{
+      text-align: left;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+}
+
+@media(max-width: 767px){
+  .about{
+    padding-bottom: 100px;
+    textarea{
+      margin: 40px 0 30px;
+    }
+  }
+}

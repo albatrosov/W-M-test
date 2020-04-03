@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Template</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="node_modules/jquery-custom-select/dist/css/jquery.custom-select.min.css">
+  <link rel="stylesheet" href="node_modules/nouislider/distribute/nouislider.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<form action="">
+
+<div class="dim"></div>
+
+<!-- ==HEADER==  -->
+<header class="header">
+  <div class="wrapper">
+
+    <nav>
+      <a href="/" class="burger">
+        <i class="fas fa-bars"></i>
+      </a>
+      <ul>
+        <li class="active">
+          <a href="#bio">Личная информация</a>
+        </li>
+        <li>
+          <a href="#experience">Опыт</a>
+        </li>
+        <li>
+          <a href="#javascript">JavaScript</a>
+        </li>
+        <li>
+          <a href="#about">О себе</a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<!-- ==HERO==  -->
+<div class="hero">
+  <div class="wrapper">
+
+    <h1>Анкета</h1>
+
+  </div>
+</div>
+
+<!-- ==BIO==  -->
+<div class="bio" id="bio">
+  <div class="wrapper">
+
+    <div class="title_image">
+      <img src="img/title_image--bio.svg" alt="">
+    </div>
+
+    <h2>Личная информация</h2>
+
+    <div class="input_wrapper">
+      <input type="text" id="name" name="name">
+      <label for="name">ФИО</label>
+    </div>
+    <div class="year_select">
+      <select name="year_selector" id="year_selector"></select>
+    </div>
+    <div class="input_wrapper">
+      <input type="text" id="city" name="city">
+      <label for="city">Место проживания</label>
+    </div>
+    <div class="input_wrapper">
+      <input type="text" id="Skype" name="Skype">
+      <label for="Skype">Skype</label>
+    </div>
+    <div class="input_wrapper">
+      <input type="text" id="email" name="email">
+      <label for="email">E-mail</label>
+    </div>
+
+  </div>
+</div>
+
+<!-- ==EXPERIENCE==  -->
+<div class="experience" id="experience">
+  <div class="wrapper">
+
+    <div class="title_image">
+      <img src="img/title_image--experience.svg" alt="">
+    </div>
+
+    <h2>Расскажите о своем опыте</h2>
+
+    <div class="skills">
+
+      <div class="skill">
+        <label class="skill__checkbox">БЭМ/OOCSS
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="skill">
+        <label class="skill__checkbox">Верстаю семантично
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label> 
+      </div>
+      <div class="skill">
+        <label class="skill__checkbox">Webpack
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="skill">
+        <label class="skill__checkbox">Stylus/LESS/SASS
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label> 
+      </div>
+      <div class="skill">
+        <label class="skill__checkbox">ES2015/ES2016
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label> 
+      </div>
+      <div class="skill">
+        <label class="skill__checkbox">jQuery
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label> 
+      </div>
+      <div class="skill">
+        <label class="skill__checkbox">Работаю с SVG
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label> 
+      </div>
+      <div class="skill">
+        <label class="skill__checkbox">Gulp/GRUNT
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label> 
+      </div>
+      <div class="skill">
+        <label class="skill__checkbox">Использую Git
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label> 
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ==JAVASCRIPT==  -->
+<div class="javascript" id="javascript">
+  <div class="wrapper">
+    
+    <div class="title_image">
+      <img src="img/title_image--javascript.svg" alt="">
+    </div>
+
+    <h2>Уровень владения JavaScript</h2>
+
+  </div>
+
+  <div class="wrapper wrapper--range">
+
+    <div class="levels">
+      <div class="level">
+        <span>
+          Не владею
+        </span>
+      </div>
+      <div class="level">
+        <span>
+          Использую готовые <br> решения
+        </span>
+      </div>
+      <div class="level">
+        <span>
+          Использую готовые решения <br>
+  и умею и переделывать
+        </span>
+      </div>
+      <div class="level">
+        <span>
+          Пишу сложный JS с нуля
+        </span>
+      </div>
+    </div>
+    <div class="range_slider" id="range_slider"></div>
+
+  </div>
+</div>
+
+<!-- ==ABOUT==  -->
+<div class="about" id="about">
+  <div class="wrapper">
+
+    <div class="title_image">
+      <img src="img/title_image--about.svg" alt="">
+    </div>
+
+    <h2>Расскажите о себе</h2>
+
+    <p>
+      Напишите несколько предложений, чем привлекла наша вакансия
+и что вы ожидаете от работы у нас.
+    </p>
+
+    <textarea name="about" id="about_body" placeholder="Понравилась тем, что..."></textarea>
+
+    <input type="submit" class="btn" value="Готово">
+
+  </div>
+</div>
+
+</form>
+
+<!-- ==MAIN SCRIPTS==  -->
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/cbb65d96d8.js" crossorigin="anonymous"></script>
+<script src="js/plugins/year-select.js"></script>
+<script src="node_modules/jquery-custom-select/dist/js/jquery.custom-select.min.js"></script>
+<script src="node_modules//nouislider/distribute/nouislider.min.js"></script>
+<script src="js/main.js"></script>
+
+<!-- ==BOTTOM SCRIPTS==  -->
+  
+</body>
+</html>

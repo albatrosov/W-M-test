@@ -1,0 +1,164 @@
+@import 'variables';
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+
+.wrapper {
+	max-width: 750px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+a{
+	color: $blue;
+	text-decoration: none;
+}
+
+h1{
+	font-size: 67px;
+	font-weight: 100;
+	line-height: 79px;
+	text-align: center;
+	color: $black;
+}
+
+h2{
+	margin-bottom: 50px;
+	font-size: 30px;
+	line-height: 35px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.btn {
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	max-width: 115px;
+	margin: auto;
+	box-sizing: border-box;
+	color: $white;
+	text-align: center;
+	border-radius: 10px;
+	font-size: 16px;
+	font-weight: 300;
+	text-decoration: none;
+	font-family: 'Roboto';
+	transition: all .3s ease;
+	background-color: $blue;
+	cursor: pointer;
+	&[type="submit"]{
+		line-height: initial;
+	}
+}
+
+.btn:hover {
+	transition: all .3s ease;
+	background-color: $lightblue;
+	color: $black;
+}
+
+.err {
+	border: 1px solid red !important;
+}
+
+// ios styles fix
+input[type="submit"]{
+	appearance: none;
+	padding: 0;
+}
+
+input, textarea{
+	width: 100%;
+	height: 60px;
+	padding-top: 15px;
+	border: 1px solid $border;
+	box-sizing: border-box;
+	border-radius: 5px;
+	font-size: 20px;
+	color: $black;
+	text-align: center;
+	font-family: 'Roboto';
+	&::placeholder{
+		color: #C8C8C8;
+	}
+	&:focus{
+		outline: none; // not style it cause it remove border-radius
+		border: 1px solid $blue;
+		~ label{
+			font-size: 14px;
+			top: 4px;
+			line-height: initial;
+		}
+	}
+}
+
+textarea{
+	text-align: left;
+}
+
+.input_wrapper{
+	position: relative;
+	margin-bottom: 25px;
+	label{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		line-height: 60px;
+		font-weight: 400;
+		font-size: 24px;
+		color: #C8C8C8;
+		transition: all .3s ease;
+		cursor: text;
+		&.active{
+			font-size: 14px;
+			top: 4px;
+			line-height: initial;
+		}
+	}
+}
+
+.title_image{
+	img{
+		display: block;
+		width: 47px;
+		margin: auto;
+	}
+}
+
+.dim {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: $black;
+	opacity: .6;
+	z-index: 9;
+	display: none;
+}
+
+.dim.opened {
+	display: block;
+}
+
+@media(max-width: 767px){
+	h1{
+		font-size: 40px;
+	}
+	h2{
+		font-size: 22px;
+		margin-bottom: 30px;
+	}
+}
